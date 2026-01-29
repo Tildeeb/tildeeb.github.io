@@ -1,0 +1,33 @@
+
+.top-banner {
+    width: 100%;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-banner h1 {
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+}
