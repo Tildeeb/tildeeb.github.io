@@ -1,8 +1,8 @@
-
 .top-banner {
     width: 100%;
     padding: 20px 40px;
     border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 .top-banner h1 {
@@ -12,9 +12,10 @@
 .nav-links {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;
+    margin: 12px 0 0 0;
 
     display: flex;
+    justify-content: center;
     gap: 24px;
 }
 
@@ -30,4 +31,7 @@
 
 .nav-links a.active {
     font-weight: 700;
+}
+html, body {
+    overflow-x: hidden;
 }
