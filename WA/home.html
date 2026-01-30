@@ -1,25 +1,51 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Tilde Baangman</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="top-banner">
+  <header class="top-banner">
     <h1>Tilde Baangman</h1>
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="home.html" class="active">Home</a></li>
-            <li><a href="about.html">About me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about.me.html">About me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
-    <h2>Welcome to my world!</h2>
-    <a href="about.me.html">Next: About me →</a>
+  </header>
+
+  <main>
+    <section class="home-section">
+      <div class="home-layout">
+        <!-- Image location -->
+        <a href="about.html" class="home-image">
+          <img src="assets/home.me.JPG" alt="Portrait of Tilde Baangman" width="250">
+        </a>
+
+        <!-- h2 + text in a right column -->
+        <div class="home-text">
+          <h2>Hi, I am Tilde.</h2>
+          <p>
+            This site is a space to get to know me and follow my journey as a
+            student-athlete and economist. It brings together my experiences in sport,
+            academics, and creative work, and how each of them shapes the way I think,
+            learn, and grow.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Tilde Baangman</p>
+  </footer>
 </body>
 </html>
