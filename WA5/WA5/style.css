@@ -11,45 +11,46 @@ html {
 }
 
 body {
-  width: 80%;
-  min-width: 1024px;
+  width: 100%;
+  max-width: 2000px;
   margin: 0 auto;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* || typography */
 
-font[size="7"], font[size="6"], font[size="5"] {
+h1, h2, h3 {
   font-family: 'Sonsie One', cursive;
   color: #2a2a2a;
+  margin: 0;
 }
 
 p, input, li, table, label {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: #2a2a2a;
+  color: #000000;
 }
 
-font[size="7"] {
+h1 {
   font-size: 4rem;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 10px black;
 }
 
-font[size="6"] {
+h2 {
   font-size: 3rem;
   text-align: center;
 }
 
-font[size="5"] {
-  font-size: 2.2rem;
+h3 {
+  font-size: 3rem;
+  text-align: center;
 }
 
 p, li, table {
   font-size: 1.6rem;
   line-height: 1.5;
 }
-
-/* || header layout */
 
 div[class="nav"], article, footer, .secondary {
   /*new contrast ratio*/

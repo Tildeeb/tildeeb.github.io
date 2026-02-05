@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 
     <title>Accessibility assessment</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7CSonsie+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
@@ -15,8 +15,8 @@
 
   <body>
     <div class="header">
-      <font size="7">Welcome to our wildlife website</font>
-    </div>
+  <h1>Welcome to our wildlife website</h1>
+</div>
 
     <div class="nav">
       <ul>
@@ -34,7 +34,8 @@
 
     <main>
       <article>
-        <font size="6">The trouble with Bears</font>
+        <!-- fix h2-->
+       <h2>The Trouble with Bears</h2>
         <br><br>
         By Evan Wild
         <br><br>
@@ -42,7 +43,8 @@
         <br><br>
         So what are bears really like, and why does the world's media portray them with such a skewed vision? In this article we try to answer those questions, and give you a real insight into the life of the bear.
         <br><br>
-        <font size="5">Types of bear</font>
+        <!--  fix h3-->
+        <h3>Types of Bear</h3>
         <br><br>
         Bears come in two varieties — large and medium. You don't get small bears. If you have seen a small bear, then it was in fact probably a baby bear (cub) from another species.
         <br><br>
@@ -78,20 +80,25 @@
             </tr>
           </tbody>
         </table>
+        <!-- fix h3-->
+       <h3>Habitats and Eating Habits</h3>
 
-        <font size="5">Habitats and Eating habits</font>
         <br><br>
         Wild bears eat a variety of meat, fish, fruit, nuts, and other natually growing ingredients. In general they will hunt for food themselves in woodland or rivers, but at a push they will track down their sustenance from farms or country houses. They tend to live in relative isolation, in caves, tents, or cottages.
         <br><br>
-        <img src="media/wild-bear.jpg">
+        <!--add description for screen readers-->
+        <img src="media/wild-bear.jpg" alt="A wild bear standing in a forest habitat">
+
         <br><br>
         Urban (gentrified) bears on the other hand have largely abandoned the old ways. They will hunt other urban creatures if necessary (including other predators like rats and foxes), but prefer to scavenge from readily available urban food outlets like dumpsters, bins, and fast food joints. When food has proven scarce, urban bears have even been known to break into people's kitchens and steal essentials like baked beans, ready meals, and microwave ovens.
         <br><br>
-        <img src="media/urban-bear.jpg">
+        <img src="media/urban-bear.jpg" alt="A wild bear looking missarable behind a fence">
         <br><br>
         Urban bears will sleep anywhere they can, from bus shelters and parks, to the toilets in McDonalds, to their own apartment.
         <br><br>
-        <font size="5">Mating rituals</font>
+        <!-- fix h3-->
+        <h3>Mating rituals</h3>
+
         <br><br>
         Bears are romantic creatures by nature, and will naturally look for a mate that they can spend the rest of their lives with. They will woo a potential suitor by making their dwelling look attractive — for example with cave paintings or a bed of reeds in the case of a wild bear, and mood lighting and a Michael Bublé CD in the case of an urban bear.
         <br><br>
@@ -104,8 +111,8 @@
         </audio>
 
         <aside>
-
-          <font size="5">About the author</font>
+<!-- fix h3-->
+          <h3>About the author</h3>
         <br><br>
           Evan Wild is an unemployed plumber from Doncaster, who has been really "in to" wildlife since childhood. He once went to Chester Zoo on holiday, but got ill after eating a doner kebab.
         <br><br>
@@ -116,8 +123,8 @@
           <div class="show-hide">Show comments</div>
 
           <div class="comment-wrapper">
-
-            <font size="6">Add comment</font>
+<!-- fix h2-->
+            <h2>Add comment</h2>
 
             <form class="comment-form">
               <div class="flex-pair">
@@ -132,8 +139,8 @@
                 <input type="submit" value="Submit comment">
               </div>
             </form>
-
-            <font size="6">Comments</font>
+<!--fix to h3-->
+            <h3>Comments</h3>
 
             <ul class="comment-container">
 
@@ -152,7 +159,7 @@
       </article>
 
       <div class="secondary">
-        <font size="6">Related</font>
+        <h3>Related</h3> <br><br>
 
         <ul>
           <li><a href="#">The trouble with Bees</a></li>
