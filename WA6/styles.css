@@ -1,0 +1,186 @@
+/* designing the site*/
+/* colorpalette*/
+:root {
+  --ink: #001524;
+  --teal: #15616D;
+  --cream: #FFECD1;
+  --orange: #FF7D00;
+  --rust: #78290F;
+
+  --font-display: "Bodoni Moda", serif;
+  --font-body: "Domine", serif;
+
+  --space-xs: 4px;
+--space-sm: 8px;
+--space-md: 16px;
+--space-lg: 24px;
+--space-xl: 32px;
+
+  --radius: 12px;
+}
+
+/* elements*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body); /*domine*/
+  background: var(--cream); /*my color of choice*/
+  color: var(--ink); /*high contrast for readability*/
+  line-height: 1.6; /* better readability */
+  padding: var(--space-xl); /* padding around content */
+}
+
+.container {
+  max-width: 1000px; /* limit content width for better readability */
+  margin: 0 auto; /* center the container */
+  display: grid; /* use grid for layout */
+  gap: var(--space-xl); /* space between sections */
+}
+
+section, header {
+  background: white; /* white background for sections */
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* typography */
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin-bottom: var(--space-sm);
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 28px; }
+h3 { font-size: 20px; }
+
+.body-text {  /* for main body paragraphs */
+  font-size: 16px; 
+}
+
+.small-text { /* for captions and notes */
+  font-size: 14px; 
+  color: #555; 
+}
+
+
+.kicker { /* small text above headings */
+  color: #666;
+  font-size: 14px;
+}
+
+
+/* color palette*/
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+
+.swatch {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.swatch-color {
+  padding: var(--space-lg);
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: bold;
+}
+
+.swatch-meta {
+  padding: var(--space-sm);
+  background: #fafafa;
+  font-size: 14px;
+}
+
+/* Individual colors */
+
+.ink .swatch-color { background: var(--ink); color: white; }
+.teal .swatch-color { background: var(--teal); color: white; }
+.cream .swatch-color { background: var(--cream); color: var(--ink); }
+.orange .swatch-color { background: var(--orange); color: var(--ink); }
+.rust .swatch-color { background: var(--rust); color: white; }
+
+/* spacing*/
+
+.spacing-demo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.space-block {
+  height: 20px;
+  background: var(--teal);
+  border-radius: 100px;
+}
+
+.xs { width: var(--space-xs); }
+.sm { width: var(--space-sm); }
+.md { width: var(--space-md); }
+.lg { width: var(--space-lg); }
+.xl { width: var(--space-xl); }
+
+/* clickables */
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: var(--space-sm);
+  transition: all 0.2s ease;
+}
+
+.primary {
+  background: var(--orange);
+  color: var(--ink);
+}
+
+.secondary {
+  background: var(--teal);
+  color: white;
+}
+
+.ghost {
+  background: transparent;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* link*/
+
+.link {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--rust);
+}
+
+.link:visited {
+  color: #5a2c20;
+}
