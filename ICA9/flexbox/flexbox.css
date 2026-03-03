@@ -2,14 +2,14 @@
 body {
   font: 1.2em / 1.5 sans-serif;
 }
-nav ul {
+.flex1 ul {
   max-width: 750px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-nav a:link,
-nav a:visited {
+.flex1 a:link,
+.flex1 a:visited {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
@@ -19,7 +19,7 @@ nav a:visited {
   text-decoration: none;
 }
 
-nav ul {
+.flex1 ul {
   display: flex;
   justify-content: space-between;
 }
@@ -28,14 +28,14 @@ nav ul {
 body {
   font: 1.2em / 1.5 sans-serif;
 }
-ul {
+.flex2 {
   max-width: 750px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-li {
+.flex2 li {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
@@ -43,22 +43,21 @@ li {
   padding: 0.5em;
 }
 
-ul {
+.flex2 {
   display: flex;
 }
-li {
+.flex2 li {
   flex: 1;
 }
 
-  
-ul {
+.flex2 {
   display: flex;
 }
 
-li {
+.flex2 li {
   flex: 1;
 }
-li:first-child {
+.flex2 li:first-child {
   flex: 2;
 }
 
@@ -66,14 +65,14 @@ li:first-child {
 body {
   font: 1.2em / 1.5 sans-serif;
 }
-ul {
+.flex3 {
   width: 450px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-li {
+.flex3 li {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
@@ -83,20 +82,20 @@ li {
 }
   /* Add styles here */
 
-  ul {
+.flex3 {
   display: flex;
   flex-wrap: wrap;
 }
 
-li {
+.flex3 li {
   /* Add styles here */
   flex: auto;
 }
-ul {
+.flex3 {
   display: flex;
   flex-wrap: wrap;
 }
 
-li {
+.flex3 li {
   flex: auto;
 }
