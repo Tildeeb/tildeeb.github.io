@@ -43,7 +43,22 @@ html, body {
   margin-top: 50px;
 }
 
-/* One clean home-layout (no duplicates) */
+/* my logo in the header // all pages */
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 60px;
+    top: 2px;
+  width: 200px;
+}
+
+/* home-layout */
 .home-layout {
   display: flex;
   align-items: flex-start;
@@ -62,7 +77,7 @@ html, body {
   flex-shrink: 0;
 }
 
-/* KEEP: placement + size of text */
+/* KEEP: placement text + size of text */
 .home-text {
   max-width: 600px;
   font-size: 1.6rem;
@@ -73,17 +88,36 @@ html, body {
   margin: 0 0 16px 0;
   font-size: 2.4rem;
 }
-/* my logo */
-.header-row {
+
+/* about.me contents */
+.grid1 {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  flex: 1; /* grow/shrink */
+  background-color: #234233;
+  color: white;
+  padding: 2em;
+  border-radius: 8px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  flex-direction: column;
+
+  transition: flex 0.5s ease;
 }
 
-.logo {
-  position: absolute;
-  left: 60px;
-    top: 2px;
-  width: 200px;
+.item p {
+  display: none;
+}
+
+/* expand hovered h2 & show content */
+.item:hover {
+  flex: 2;
+}
+.item:hover p {
+  display: block;
 }
