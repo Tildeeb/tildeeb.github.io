@@ -102,10 +102,9 @@ html, body {
   padding: 2em;
   border-radius: 8px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: flex; 
+  align-items: center; 
+ flex-direction: column;
 
   transition: flex 0.5s ease; /*found this as a solution in makeing the transitions less "choppy" */
 }
@@ -119,5 +118,5 @@ html, body {
   flex: 2;
 }
 .item:hover p {
-  display: block;
+ display: block;
 }
