@@ -84,9 +84,9 @@ html, body {
   line-height: 1.6;
 }
 
-.home-text h2 {
-  margin: 0 0 16px 0;
-  font-size: 2.4rem;
+.home-text h2
+h1, h2, h3 {
+  font-family: "Inter", sans-serif;
 }
 
 /* about.me contents */
