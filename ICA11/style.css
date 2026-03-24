@@ -1,0 +1,121 @@
+/* style.css */
+.top-banner {
+  width: 100%;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.top-banner h1 {
+  margin: 0;
+}
+
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+/*flexbox to organize them horizontally*/
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links a.active {
+  font-weight: 700;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.home-section {
+  margin-top: 50px;
+}
+
+/* my logo in the header // all pages */
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute; /*independent of the other elements*/
+  left: 60px;
+    top: 2px;
+  width: 200px;
+}
+
+/* home-layout */
+.home-layout {
+  display: flex; /*organize horizontally*/ 
+  align-items: flex-start;
+  gap: 80px;
+  margin-top: 60px;
+
+  /* image far left, text stays to the right */
+  justify-content: flex-start;
+
+  /* page padding */
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.home-image {
+  flex-shrink: 0;
+}
+
+/* placement text + size of text */
+.home-text {
+  max-width: 600px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Inter", sans-serif;
+}
+
+/* about.me contents */
+.grid1 {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  flex: 1; /* grow/shrink */
+  background-color: #234233;
+  color: white;
+  padding: 2em;
+  border-radius: 8px;
+
+  display: flex; 
+  align-items: center; 
+ flex-direction: column;
+
+  transition: flex 0.5s ease; /*found this as a solution in makeing the transitions less "choppy" */
+}
+
+.item p {
+  display: none;
+}
+
+/* expand hovered h2 & show content */
+.item:hover {
+  flex: 2;
+}
+.item:hover p {
+ display: block;
+}
