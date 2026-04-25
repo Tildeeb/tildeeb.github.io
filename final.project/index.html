@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Puzzle</title>
+  <title>Terrible Volume Tool</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h2>Puzzle the pieces to adjust the volume</h2>
+  <h2>Volume Control, good luck!</h2>
+  <p>Drag each slice into the circle to raise the volume by 10%.</p>
+
+  <div id="progress">0% complete</div>
+  <div id="message">Volume is currently 0.</div>
+
+  <button id="confirmBtn">Begin the volume adjustment</button>
+  <button id="resetBtn">Reset the nonsense</button>
+
+  <audio id="audio" src="audio.mp3" loop></audio>
 
   <div id="game">
     <div id="circle"></div>

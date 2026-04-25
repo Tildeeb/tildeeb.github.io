@@ -1,30 +1,76 @@
-body {
-  text-align: center;
-}
-
 body, html {
   height: 100%;
   margin: 0;
 }
 
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: pink;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
 #game {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 75%;
 }
 
-/* Circle outline */
 #circle {
-   position: absolute;
+  position: absolute;
   width: 200px;
   height: 200px;
-  border: 3px dashed black;
+  border: 4px dashed black;
   border-radius: 50%;
-  left: 550px;
-  top: 100px;
+  left: 50%;
+  top: 170px;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Puzzle pieces */
+#progress {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 8px;
+}
+
+#message {
+  font-size: 16px;
+  color: darkred;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 8px;
+}
+
+button {
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: red;
+}
+
 .piece {
   position: absolute;
   width: 200px;
@@ -35,13 +81,23 @@ body, html {
   cursor: grab;
 }
 
-#p1  { transform: rotate(0deg); }
-#p2  { transform: rotate(36deg); }
-#p3  { transform: rotate(72deg); }
-#p4  { transform: rotate(108deg); }
-#p5  { transform: rotate(144deg); }
-#p6  { transform: rotate(180deg); }
-#p7  { transform: rotate(216deg); }
-#p8  { transform: rotate(252deg); }
-#p9  { transform: rotate(288deg); }
-#p10 { transform: rotate(324deg); }
+.piece:active {
+  cursor: grabbing;
+}
+
+.snapped {
+  cursor: default;
+  opacity: 0.85;
+}
+
+/* Each piece points in a different direction */
+#p1  { transform: rotate(0deg); background: red; }
+#p2  { transform: rotate(36deg); background: orange; }
+#p3  { transform: rotate(72deg); background: yellow; }
+#p4  { transform: rotate(108deg); background: lightseagreen; }
+#p5  { transform: rotate(144deg); background: turquoise; }
+#p6  { transform: rotate(180deg); background: blue; }
+#p7  { transform: rotate(216deg); background: purple; }
+#p8  { transform: rotate(252deg); background: hotpink; }
+#p9  { transform: rotate(288deg); background: coral; }
+#p10 { transform: rotate(324deg); background: green; }
