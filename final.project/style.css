@@ -46,15 +46,7 @@ p {
   margin: 8px;
 }
 
-#message {
-  font-size: 16px;
-  color: darkred;
-  background: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  display: inline-block;
-  margin: 8px;
-}
+
 
 button {
   font-size: 16px;

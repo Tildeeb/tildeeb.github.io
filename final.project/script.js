@@ -12,18 +12,6 @@ audio.loop = true;
 
 let progressValue = 0;
 
-const messages = [
-  "Still basically silent.",
-  "A whisper has entered the room.",
-  "The volume is thinking about increasing.",
-  "This could have been a slider.",
-  "Almost useful, but not quite.",
-  "Halfway there. Unfortunately.",
-  "The audio is gaining confidence.",
-  "This is definitely too much work.",
-  "So close. For no good reason.",
-  "Maximum volume achieved. Somehow."
-];
 
 function updateProgress() {
   progress.textContent = progressValue + "% complete";
