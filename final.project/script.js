@@ -2,7 +2,6 @@ const pieces = document.querySelectorAll(".piece");
 const circle = document.getElementById("circle");
 const game = document.getElementById("game");
 const progress = document.getElementById("progress");
-const message = document.getElementById("message");
 const confirmBtn = document.getElementById("confirmBtn");
 const resetBtn = document.getElementById("resetBtn");
 const audio = document.getElementById("audio");
@@ -12,21 +11,16 @@ audio.loop = true;
 
 let progressValue = 0;
 
-
 function updateProgress() {
   progress.textContent = progressValue + "% complete";
   audio.volume = progressValue / 100;
-
-  if (progressValue === 0) {
-    message.textContent = "Volume is currently 0.";
-  } else {
-    message.textContent = messages[(progressValue / 10) - 1];
-  }
 }
 
 function randomPosition(piece) {
-  piece.style.left = Math.random() * 500 + "px";
-  piece.style.top = Math.random() * 350 + "px";
+  const gameRect = game.getBoundingClientRect();
+
+  piece.style.left = Math.random() * (gameRect.width - 200) + "px";
+  piece.style.top = Math.random() * (gameRect.height - 200) + "px";
 }
 
 function snapPieceToCircle(piece) {
@@ -37,7 +31,6 @@ function snapPieceToCircle(piece) {
   piece.style.top = circleRect.top - gameRect.top + "px";
 }
 
-
 pieces.forEach(piece => {
   randomPosition(piece);
   piece.dataset.snapped = "false";
@@ -47,9 +40,7 @@ pieces.forEach(piece => {
   let offsetY = 0;
 
   piece.addEventListener("mousedown", (e) => {
-    if (piece.dataset.snapped === "true") {
-      return;
-    }
+    if (piece.dataset.snapped === "true") return;
 
     isDragging = true;
 
@@ -59,9 +50,7 @@ pieces.forEach(piece => {
   });
 
   document.addEventListener("mousemove", (e) => {
-    if (!isDragging) {
-      return;
-    }
+    if (!isDragging) return;
 
     const gameRect = game.getBoundingClientRect();
 
@@ -70,44 +59,41 @@ pieces.forEach(piece => {
   });
 
   document.addEventListener("mouseup", () => {
-  if (!isDragging) {
-    return;
-  }
+    if (!isDragging) return;
 
-  isDragging = false;
+    isDragging = false;
 
-  const gameRect = game.getBoundingClientRect();
-  const circleRect = circle.getBoundingClientRect();
+    const gameRect = game.getBoundingClientRect();
+    const circleRect = circle.getBoundingClientRect();
 
-  const pieceLeft = parseFloat(piece.style.left);
-  const pieceTop = parseFloat(piece.style.top);
+    const pieceLeft = parseFloat(piece.style.left);
+    const pieceTop = parseFloat(piece.style.top);
 
-  const pieceCenterX = gameRect.left + pieceLeft + 100;
-  const pieceCenterY = gameRect.top + pieceTop + 100;
+    const pieceCenterX = gameRect.left + pieceLeft + 100;
+    const pieceCenterY = gameRect.top + pieceTop + 100;
 
-  const circleCenterX = circleRect.left + circleRect.width / 2;
-  const circleCenterY = circleRect.top + circleRect.height / 2;
+    const circleCenterX = circleRect.left + circleRect.width / 2;
+    const circleCenterY = circleRect.top + circleRect.height / 2;
 
-  const dx = pieceCenterX - circleCenterX;
-  const dy = pieceCenterY - circleCenterY;
-  const distance = Math.sqrt(dx * dx + dy * dy);
+    const dx = pieceCenterX - circleCenterX;
+    const dy = pieceCenterY - circleCenterY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
 
-  if (distance < 130 && piece.dataset.snapped !== "true") {
-    snapPieceToCircle(piece);
+    if (distance < 130 && piece.dataset.snapped !== "true") {
+      snapPieceToCircle(piece);
 
-    piece.dataset.snapped = "true";
-    piece.classList.add("snapped");
+      piece.dataset.snapped = "true";
+      piece.classList.add("snapped");
 
-    progressValue += 10;
-    updateProgress();
-  }
+      progressValue += 10;
+      updateProgress();
+    }
   });
 });
 
 confirmBtn.addEventListener("click", () => {
   audio.currentTime = 0;
   audio.play();
-
   alert("Audio is on.");
 });
 
